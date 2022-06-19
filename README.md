@@ -13,7 +13,7 @@ git clone https://github.com/valdenir-ziger/bora-ai-backend.git bora-ai-backend
 Após realizar o clone, basta acessar o projeto:
 
 ```
-cd bora-ai
+cd bora-ai-backend
 ```
 ***
 ## **Rodando o projeto**
