@@ -2,7 +2,7 @@
 # **Projeto BoraAi**
 ## **Primeiros passos**
 
-Para você que não possui o Eclipse instalado, basta acessar link https://www.eclipse.org/downloads/ e fazer download da ultima versão da IDE disponível
+Para você que não possui o Eclipse instalado, basta acessar link https://www.eclipse.org/downloads/ e fazer download da última versão da IDE disponível
 
 Depois de instalado faça o clone do projeto acessando os menus na IDE Eclipse:
 
