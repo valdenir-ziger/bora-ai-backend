@@ -16,15 +16,15 @@ public class inicio {
         SessionFactory sessionFactory;
         Configuration  configuracao = new  Configuration().
         setProperty("hibernate.dialect"                , "org.hibernate.dialect.PostgreSQLDialect").
-        setProperty("hibernate.cache.provider_class"   , "org.hibernate.cache.NoCacheProvider").
+        //setProperty("hibernate.cache.provider_class"   , "org.hibernate.cache.NoCacheProvider").
         setProperty("hibernate.connection.driver_class", "org.postgresql.Driver").
-		setProperty("hibernate.connection.url"         , "jdbc.postgresql://localhost:5432/boraai?useUnicode=true&characterEncoding=UTF-8").
+		setProperty("hibernate.connection.url"         , "jdbc:postgresql://localhost:5432/boraai").
 		setProperty("hibernate.connection.username"    , "postgres").
 		setProperty("hibernate.connection.password"    , "pgsql").
 		setProperty("hibernate.hbm2ddl.auto"           , "update").
 		setProperty("hibernate.show_sql"               , "true").
         setProperty("hibernate.format_sql"             , "true").
-        setProperty("hibernate.current_session_context_class", "thread").
+        //setProperty("hibernate.current_session_context_class", "thread").
         setProperty("hibernate.connection.provider_class", "org.hibernate.connection.C3P0ConnectionProvider").
         setProperty("hibernate.c3p0.min_size"          , "5").
         setProperty("hibernate.c3p0.max_size"          , "20").
@@ -41,7 +41,7 @@ public class inicio {
         Usuario usuario = new Usuario(123456789);
         usuario.setNome("Deno");
         usuario.setDataNascimento(null);
-        usuario.setEmail("a@A");
+        usuario.setEmail("valdenir@alunos.utfpr.edu.br");
         usuario.setTelefone("46 3536 7939");
         
         Session 	session = null;
@@ -49,20 +49,18 @@ public class inicio {
         try {
             session = sessionFactory.openSession();
             tx = session.beginTransaction();
-            session.persist(usuario);
+            session.merge(usuario);
             tx.commit();
-        } catch (Exception e) {
+            
+            System.out.println(usuario.getCpfCnpj() + " - " + usuario.getNome());
+        } catch (Exception exception) {
             if (tx != null) {
               tx.rollback();
             }
-            System.out.println("Transação falhou : ");
-            e.printStackTrace();
+            System.out.println("Erro ao gravar: " + exception.getMessage());
+            exception.printStackTrace();
         } finally {
             session.close();
         }
-
-        
-        System.out.println(usuario.getNome());
-        
 	}
 }
