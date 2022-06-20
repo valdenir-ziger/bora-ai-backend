@@ -8,20 +8,26 @@ Depois de instalado faça o clone do projeto acessando os menus na IDE Eclipse:
 
 ```
 Window/Show View/Other...
-git clone https://github.com/valdenir-ziger/bora-ai-backend.git bora-ai-backend
 ```
 Selecionar a pastinha GIT e depois Git Repositories.
 Logo após abrir a ferramenta, selecionar a opção "Clone a Git repository"
 
 ![image](https://user-images.githubusercontent.com/95504751/174644834-209802fa-87dd-426a-91af-ca2f1e65abdf.png)
 
- clicar em next>
+ colocar a URL https://github.com/valdenir-ziger/bora-ai-backend e clicar em next >
+ 
+ ![image](https://user-images.githubusercontent.com/95504751/174645409-4d4fb3fd-3b9d-4771-ad39-3545faeeedfb.png)
+ 
+ marcar as opções selecionadas para importar o projeto e "Finish"
 
-Após realizar o clone, basta acessar o projeto:
+logo após fazer a importação do projeto
 
-```
-cd bora-ai-backend
-```
+![image](https://user-images.githubusercontent.com/95504751/174645923-20908b2c-fc3c-4544-aaa8-a41d2532d9e8.png)
+
+Após realizar a importação, basta acessar o projeto:
+
+![image](https://user-images.githubusercontent.com/95504751/174646341-2f8f2f42-7ade-4157-82d0-718cb0066703.png)
+
 ***
 ## **Rodando o projeto**
 Para dar start no projeto e ver a coisa acontecer, aperte Ctrl+F11:
