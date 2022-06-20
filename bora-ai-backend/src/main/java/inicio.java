@@ -1,4 +1,7 @@
 
+import java.math.BigInteger;
+import java.sql.Date;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -38,7 +41,11 @@ public class inicio {
         StandardServiceRegistry standardServiceRegistry = standardServiceRegistryBuilder.build();
         sessionFactory = configuracao.buildSessionFactory(standardServiceRegistry); 
         
-        Usuario usuario = new Usuario(123456789);
+        testeRapido(sessionFactory);
+	}
+	
+	private static void testeRapido(SessionFactory sessionFactory) {
+		Usuario usuario = new Usuario(346519920);
         usuario.setNome("Deno");
         usuario.setDataNascimento(null);
         usuario.setEmail("valdenir@alunos.utfpr.edu.br");
