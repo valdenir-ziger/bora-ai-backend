@@ -29,7 +29,7 @@ Após realizar a importação, basta acessar o projeto:
 ![image](https://user-images.githubusercontent.com/95504751/174646341-2f8f2f42-7ade-4157-82d0-718cb0066703.png)
 
 Adicionar pelo EclipseMarketplace Hibernate Tools e Jboss Tools caso precise.
-Configurar o TonCat para rodar a aplicação, de preferencia a versão 10.
+Configurar o TomCat para rodar a aplicação, de preferência a versão 10.
 
 ***
 ## **Rodando o projeto**
